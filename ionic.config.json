@@ -4,5 +4,11 @@
     "capacitor": {}
   },
   "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://slime-rancher.vercel.app/api/slime"
+    }
+  ],
   "id": "e3bcbd1e"
 }
