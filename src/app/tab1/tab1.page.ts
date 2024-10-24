@@ -18,7 +18,7 @@ export class Tab1Page implements OnInit {
   }
 
   getSlimes() {
-    this.http.get<{ status: string; slimes: Slime[] }>('https://slime-rancher.vercel.app/api/slime')
+    this.http.get<{ status: string; slimes: Slime[] }>('http://localhost:3001/api/slimes')
       .subscribe(
         (data) => {
           console.log("DATOS: ",data);
