@@ -5,15 +5,17 @@ import { AuthGuard } from './auth/auth.guard';
 const routes: Routes = [
   {
     path: 'tabs',
-    canActivate: [AuthGuard], // Protege la ruta de tabs
+    canActivate: [AuthGuard],
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: 'login',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'create',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./create/create.module').then(m => m.CreatePageModule)
   },
   {
@@ -22,6 +24,7 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
+
 
 @NgModule({
   imports: [
